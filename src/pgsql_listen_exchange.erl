@@ -8,7 +8,8 @@
 %% @end
 
 -module(pgsql_listen_exchange).
-
+%-include_lib("rabbit_common/include/rabbit.hrl").
+%%-include_lib("rabbit_common/include/rabbit_framing.hrl").
 -behaviour(rabbit_exchange_type).
 
 -export([add_binding/3,
@@ -23,6 +24,8 @@
          serialise_events/0,
          validate/1,
          validate_binding/2]).
+
+-export([info/1, info/2]).
 
 -include("pgsql_listen.hrl").
 
@@ -45,6 +48,9 @@ assert_args_equivalence(X, Args) ->
 create(transaction, _X) -> ok;
 create(none, X) ->
   gen_server_call({create, X}).
+
+info(_X) -> [].
+info(_X, _) -> [].
 
 description() ->
   [{name, ?X_TYPE}, {description, ?X_DESC}].

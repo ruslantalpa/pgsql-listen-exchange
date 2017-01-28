@@ -2,3 +2,6 @@
 build
 dist
 ebin
+.erlang.mk
+deps
+*.sublime*

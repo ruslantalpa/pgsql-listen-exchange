@@ -70,7 +70,7 @@ convert_gregorian_to_julian(GregorianSeconds) ->
 
 %% @private
 current_gregorian_timestamp() ->
-  calendar:datetime_to_gregorian_seconds(calendar:now_to_universal_time(now())).
+  calendar:datetime_to_gregorian_seconds(calendar:now_to_universal_time(erlang:timestamp())).
 
 %% @private
 current_timestamp() ->
