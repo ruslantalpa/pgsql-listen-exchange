@@ -156,12 +156,6 @@ Building
 Steps to custom build a version of the pgsql-listen-exchange plugin:
 
 .. code-block:: bash
-
-    git clone https://github.com/rabbitmq/rabbitmq-public-umbrella
-    cd rabbitmq-public-umbrella
-    make co
-    make BRANCH=rabbitmq_v3_5_4 up_c
-    git clone https://github.com/gmr/epgsql-wrapper.git
-    git clone https://github.com/aweber/pgsql-listen-exchange.git
+    git clone https://github.com/ruslantalpa/pgsql-listen-exchange.git
     cd rabbitmq-pgsql-listen-exchange
-    make
+    make dist

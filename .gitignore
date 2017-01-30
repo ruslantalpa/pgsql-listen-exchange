@@ -1,6 +1,7 @@
 .DS_Store
 build
 dist
+plugins
 ebin
 .erlang.mk
 deps
